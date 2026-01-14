@@ -1,9 +1,14 @@
 package arays;
 
+import java.util.Scanner;
 import Metodos.Recursos;
 
 public class Bingo {
 
+	final static int NUMERO_BOLAS=90;
+	final static int FILAS_CARTON=3;
+	final static int COLUMNAS_CARTON=9;
+	
 	static int [][] tableroBingo = new int [9][10];
 
 	public static void mostrarTablero () {
@@ -34,15 +39,23 @@ public class Bingo {
 	}
 	
 	public static void generarCarton() {
-		 
+		//ToDo - Work in progress
+		int[][] carton = new int[FILAS_CARTON][COLUMNAS_CARTON];
 	}
 	
 	public static void main(String[] args) {
-		char bingo;
+		Scanner sc = new Scanner(System.in);
+		String hayBingo;
+		
 		do {
 			sacarBola();
 			mostrarTablero();
-		}while(bingo != 's');
+			
+			
+			//Repetimos hasta que el administrador ponga una s
+			hayBingo=sc.nextLine().toLowerCase();
+			
+		} while (!hayBingo.equals("s"));
 		
 
 	}
