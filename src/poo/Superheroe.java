@@ -13,7 +13,7 @@ public class Superheroe {
 	}
 	
 	public void describricion() {
-		System.out.print("Su nombre " + nombre + " superpoder " + superpoder);
+		System.out.print("Su nombre " + this.nombre + " superpoder " + this.superpoder);
 		if(this.capa) {
 			System.out.println(" y lleva capa");
 		}else {
